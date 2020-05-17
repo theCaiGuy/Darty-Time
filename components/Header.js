@@ -57,9 +57,7 @@ const userImgStyle = {
 const wordLogoStyle = {
   marginTop: '0px',
   marginBottom: '10px',
-  width: '60%',
-  marginLeft: '20%',
-  marginRight: '20%',
+  width: '100%',
   color: colors.BLUE,
   fontSize: '88px',
   fontFamily: 'Brush Script MT',
