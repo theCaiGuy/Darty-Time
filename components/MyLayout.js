@@ -1,5 +1,3 @@
-import GlobalFonts from './HeaderFont';
-
 const background_styles = {
   backgroundColor: 'white',
   width: '100%',
@@ -9,7 +7,6 @@ const background_styles = {
 
 const Layout = props => (
   <div style={background_styles}>
-    <GlobalFonts />
     <style jsx>{`
       div {
         color: #333;

@@ -4,7 +4,6 @@ import { mutePlayback, unmutePlayback } from '../actions/playbackActions';
 import ButtonStyle from './ButtonStyle';
 import ButtonDarkStyle from './ButtonDarkStyle';
 import * as colors from '../constants/color_scheme';
-import GlobalFonts from './HeaderFont';
 
 const headerStyle = {
   height: '100%',
@@ -58,13 +57,8 @@ const userImgStyle = {
 const wordLogoStyle = {
   marginTop: '10px',
   marginBottom: '10px',
-  width: '100%',
-  fontSize: '88px',
-  fontFamily: 'Ballpark',
-  color: colors.BLUE
+  width: '60%'
 };
-
-const party_names = ['Endless KA', 'UnlimiteDTD', 'Dunch', 'Linner', 'Terman Fountain'];
 
 const getNameFromUser = user => {
   return user.display_name || user.id;
@@ -81,7 +75,7 @@ const Header = ({ session, muted, mutePlayback, unmutePlayback, login }) => (
     </div>
 
     <div style={logoUserBox}>
-      <div style={wordLogoStyle}>Darty Time</div>
+      <img style={wordLogoStyle} src={'../static/word_logo.png'} alt="Darty Time" />
       {session.user ? (
         <div style={userHeader}>
           <img
