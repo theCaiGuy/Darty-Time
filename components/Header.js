@@ -59,7 +59,7 @@ const wordLogoStyle = {
   width: '100%',
   color: colors.BLUE,
   fontSize: '88px',
-  fontFamily: 'Brush Script MT',
+  fontFamily: 'Brush Script MT, Helvetica Neue, Helvetica, Arial, sans-serif',
   alignItems: 'center',
   fontWeight: 'bold'
 };

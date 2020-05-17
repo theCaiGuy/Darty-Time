@@ -171,15 +171,11 @@ class NowPlaying extends React.PureComponent {
                   style={skipBtn}
                   onClick={() => {
                     this.props.voteSkip(this.props.track.id);
-                    let prev_votes = this.state.total_votes;
-                    this.setState({
-                      total_votes: prev_votes + 1
-                    });
                   }}
                   disabled={!this.props.logged_in}
                 >
                   <FontAwesomeIcon
-                    icon={['fas', 'step-forward']}
+                    icon={['fas', 'thumbs-down']}
                     color="white"
                     size="2x"
                     style={{ marginBottom: '5px' }}

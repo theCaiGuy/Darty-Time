@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
+
 import Player from '../components/Player';
 import { initStore } from '../store/store';
 import withRedux from 'next-redux-wrapper';
@@ -11,6 +12,10 @@ import { fetchPlayingContext } from '../actions/playbackActions';
 import Layout from '../components/MyLayout.js';
 import * as colors from '../constants/color_scheme';
 import Header from '../components/Header';
+import About from '../components/About';
+import Chat from '../components/Chat';
+import Donate from '../components/Donate';
+import Rooms from '../components/Rooms';
 
 library.add(fab);
 
@@ -123,11 +128,10 @@ class App extends Component {
             <Header />
           </div>
           <div style={Section}>
-            <h1>TODO: About</h1>
-            <p>Welcome to my site</p>
+            <About />
           </div>
           <div style={Section}>
-            <h1>TODO: Chat</h1>
+            <Chat />
           </div>
         </div>
         <div

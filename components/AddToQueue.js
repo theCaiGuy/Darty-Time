@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { injectIntl } from 'react-intl';
 
 import { searchTracks, searchTracksReset } from '../actions/searchActions';
 import { queueTrack } from '../actions/queueActions';

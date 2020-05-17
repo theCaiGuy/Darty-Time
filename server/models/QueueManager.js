@@ -10,6 +10,7 @@ class QueueManager {
     this.queue = [];
     this.onQueueChanged = options.onQueueChanged;
     this.onQueueEnded = options.onQueueEnded;
+    this.onVoteSkip = options.onVoteSkip;
     this.onPlay = options.onPlay;
     this.getToken = options.getToken;
     this.spotifyApi = options.spotifyApi;
@@ -84,7 +85,7 @@ class QueueManager {
         user: queueItem.user
       });
       this.timeout = setTimeout(() => {
-        this.play();
+        this.play(false);
       }, 2000 + queueItem.track.duration_ms);
       this.onPlay();
     } else {
@@ -145,6 +146,7 @@ class QueueManager {
       if (this.playingContext.track.skip_voters.length > (this.users.length - 1) / 2) {
         this.play(true);
       }
+      this.onVoteSkip();
     }
   }
 

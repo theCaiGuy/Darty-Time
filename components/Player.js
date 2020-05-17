@@ -67,8 +67,8 @@ class Player extends React.Component {
                 ? this.props.playing.track.skip_voters.length
                 : 0
             }
-            total_users={this.props.users.length - 1 || 0}
-            logged_in={this.props.session.user ? true : false}
+            total_users={(this.props.users && this.props.users.length - 1) || 0}
+            logged_in={this.props.session && this.props.session.user ? true : false}
           />
         </div>
         <div style={queue}>

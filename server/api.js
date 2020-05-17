@@ -71,6 +71,14 @@ const queueManager = new QueueManager({
       });
     });
   },
+  onVoteSkip: () => {
+    const { track, user } = queueManager.getPlayingContext();
+    users.forEach(u => {
+      u.socketIdArray.forEach((socketId, index) => {
+        globalIo.to(socketId).emit('update now playing', track, user);
+      });
+    });
+  },
   onQueueChanged: () => {
     globalSocket && globalSocket.emit('update queue', queueManager.getQueue());
     globalSocket && globalSocket.broadcast.emit('update queue', queueManager.getQueue());
