@@ -56,7 +56,6 @@ const userImgStyle = {
 
 const wordLogoStyle = {
   marginTop: '0px',
-  marginBottom: '10px',
   width: '100%',
   color: colors.BLUE,
   fontSize: '88px',
