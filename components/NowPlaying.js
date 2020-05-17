@@ -95,11 +95,13 @@ const skipBtn = {
 };
 
 class NowPlaying extends React.PureComponent {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       start: Date.now(),
-      currentPosition: 0
+      currentPosition: 0,
+      total_votes: this.props.total_votes,
+      total_users: this.props.total_users
     };
     this.timer = null;
     this.tick = () => {
@@ -110,10 +112,17 @@ class NowPlaying extends React.PureComponent {
   }
   componentDidUpdate(props) {
     if (this.props.track) {
-      if (this.props.position !== props.position || this.props.track !== props.track) {
+      if (
+        this.props.position !== props.position ||
+        this.props.track !== props.track ||
+        this.props.total_votes !== props.total_votes ||
+        this.props.total_users !== props.total_users
+      ) {
         this.setState({
           start: Date.now(),
-          currentPosition: 0
+          currentPosition: 0,
+          total_votes: this.props.total_votes,
+          total_users: this.props.total_users
         });
       }
     }
@@ -171,7 +180,7 @@ class NowPlaying extends React.PureComponent {
                     size="2x"
                     style={{ marginBottom: '5px' }}
                   />
-                  <div>{`${this.props.total_votes} / ${Math.floor(this.props.total_users / 2) + 1}`}</div>
+                  <div>{`${this.state.total_votes} / ${Math.floor(this.state.total_users / 2) + 1}`}</div>
                 </button>
               </div>
             ) : (

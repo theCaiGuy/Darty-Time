@@ -60,12 +60,12 @@ class QueueManager {
   }
 
   init() {
-    this.play();
+    this.play(false);
   }
 
-  play() {
+  play(isSkip) {
     console.log('api.js > play');
-    if (this.timeout) {
+    if (this.timeout && isSkip) {
       clearTimeout(this.timeout);
     }
     if (this.queue.length > 0) {
@@ -143,7 +143,7 @@ class QueueManager {
         `${this.playingContext.track.skip_voters.length} / ${this.users.length - 1} have voted to skip ${id}`
       );
       if (this.playingContext.track.skip_voters.length > (this.users.length - 1) / 2) {
-        this.play();
+        this.play(true);
       }
     }
   }
