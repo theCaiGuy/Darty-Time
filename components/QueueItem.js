@@ -55,7 +55,9 @@ export default ({ index, item, session, onRemoveItem, onVoteUp, onVoteDown, bgCo
       </td>
       <td style={queueElem}>
         <div>
-          {item.voters && session.user && item.voters.filter(v => v.id === session.user.id).length === 0 ? (
+          {item.voters &&
+          session.user &&
+          item.voters.filter(v => v && session.user && v.id === session.user.id).length === 0 ? (
             <button onClick={onVoteUp} className="btn" style={btnStyle}>
               ▲
             </button>
