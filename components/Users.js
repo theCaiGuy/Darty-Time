@@ -43,13 +43,13 @@ export default ({ items }) => {
       `}</style>
       <ul style={continerStyle}>
         {items.map((i, index) => {
-          const userName = i.display_name || i.id;
+          const userName = i ? i.display_name || i.id : 'Anonymous';
           return (
             <li key={index} style={userListItem} className="userListItem">
               <div style={mediaImgStyle}>
                 <img
                   style={userImgStyle}
-                  src={(i.images && i.images.length && i.images[0].url) || '../static/user-icon.png'}
+                  src={(i && i.images && i.images.length && i.images[0].url) || '../static/user-icon.png'}
                   width="40"
                   height="40"
                   alt={userName}
