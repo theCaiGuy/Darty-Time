@@ -48,7 +48,7 @@ class QueueManager {
     this.queue.push(queueItem);
     this.handleQueueChanged();
     if (this.playingContext.track === null) {
-      this.play();
+      this.play(false);
     }
   }
 
