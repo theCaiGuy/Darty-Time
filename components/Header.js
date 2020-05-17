@@ -55,9 +55,16 @@ const userImgStyle = {
 };
 
 const wordLogoStyle = {
-  marginTop: '10px',
+  marginTop: '0px',
   marginBottom: '10px',
-  width: '60%'
+  width: '60%',
+  marginLeft: '20%',
+  marginRight: '20%',
+  color: colors.BLUE,
+  fontSize: '88px',
+  fontFamily: 'Brush Script MT',
+  alignItems: 'center',
+  fontWeight: 'bold'
 };
 
 const getNameFromUser = user => {
@@ -75,7 +82,8 @@ const Header = ({ session, muted, mutePlayback, unmutePlayback, login }) => (
     </div>
 
     <div style={logoUserBox}>
-      <img style={wordLogoStyle} src={'../static/word_logo.png'} alt="Darty Time" />
+      {/* <img style={wordLogoStyle} src={'../static/word_logo.png'} alt="Darty Time" /> */}
+      <div style={wordLogoStyle}>Darty Time</div>
       {session.user ? (
         <div style={userHeader}>
           <img
