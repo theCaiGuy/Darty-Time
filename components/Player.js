@@ -1,5 +1,4 @@
 import React from 'react';
-import withRedux from 'next-redux-wrapper';
 import Users from './Users';
 import Queue from './Queue';
 import AddToQueue from './AddToQueue';
@@ -92,4 +91,4 @@ class Player extends React.Component {
   }
 }
 
-export default withRedux()(Player);
+export default Player;
