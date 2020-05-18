@@ -86,7 +86,7 @@ class Devices extends React.PureComponent {
                     {device.is_active ? (
                       <div style={activeText}>
                         {device.name}
-                        <FontAwesomeIcon icon={['fas', 'headphones']} color="black" style={{ marginLeft: '10px' }} />
+                        <FontAwesomeIcon icon={['fas', 'headphones']} color="black" />
                       </div>
                     ) : (
                       <p style={passiveText}>{device.name}</p>

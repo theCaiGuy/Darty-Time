@@ -1,8 +1,7 @@
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const { ANALYZE } = process.env;
-const withCSS = require('@zeit/next-css');
 
-module.exports = withCSS({
+module.exports = {
   webpack: function(config, { dev }) {
     if (ANALYZE) {
       config.plugins.push(
@@ -22,4 +21,4 @@ module.exports = withCSS({
 
     return config;
   }
-});
+};

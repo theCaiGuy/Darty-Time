@@ -22,10 +22,17 @@ const attribution = {
   marginBottom: '10px'
 };
 
+const header2 = {
+  color: colors.GRAY,
+  fontSize: '24px',
+  textTransform: 'uppercase'
+};
+
 class Chat extends React.Component {
   render() {
     return (
       <div style={chat_container}>
+        <h2 style={header2}>Banter</h2>
         <div style={chat_box}>
           <Iframe url="https://minnit.chat/BirthdayDarty?embed&transparent&nickname=" width="100%" height="100%" />
         </div>

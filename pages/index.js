@@ -53,7 +53,7 @@ const Section = {
   borderRadius: '20px',
   marginTop: '30px',
   marginBottom: '30px',
-  paddingTop: '20px',
+  paddingTop: '10px',
   paddingBottom: '30px',
   overflow: 'auto',
   background: `linear-gradient(rgba(255,255,255,${opacity_top}), rgba(255,255,255,${opacity_top}), rgba(255,255,255,${opacity_bottom}));`
@@ -127,7 +127,12 @@ class App extends Component {
           <div style={Banner}>
             <Header />
           </div>
-          <div style={Section}>
+          <div
+            style={{
+              ...Section,
+              paddingTop: 0
+            }}
+          >
             <About />
           </div>
           <div style={Section}>

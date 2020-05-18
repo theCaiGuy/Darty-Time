@@ -1,64 +1,64 @@
 import React from 'react';
-import Carousel from 'react-bootstrap/Carousel';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+
+library.add(fas);
 
 import * as colors from '../constants/color_scheme';
 
-const slideImages = [
-  '../static/slideshow/IMG_1085.png',
-  '../static/slideshow/IMG_2921.jpeg',
-  '../static/slideshow/IMG_4316.jpeg',
-  '../static/slideshow/IMG_6538.jpeg',
-  '../static/slideshow/IMG_6712.jpeg',
-  '../static/slideshow/IMG_6969_2.png',
-  '../static/slideshow/IMG_6969.png'
-];
-
-const properties = {
-  duration: 5000,
-  transitionDuration: 500,
-  infinite: true,
-  indicators: true,
-  arrows: true,
-  pauseOnHover: true
-  // onChange: (oldIndex, newIndex) => {
-  //   console.log(`slide transition from ${oldIndex} to ${newIndex}`);
-  // }
-};
-
 const about_container = {
   alignItems: 'stretch',
-  width: '95%',
-  marginLeft: '2.5%',
-  marginRight: '2.5%',
+  width: '100%',
   height: 'auto',
   fontSize: '36px',
   color: colors.GRAY,
-  textAlign: 'left'
+  textAlign: 'center'
+};
+
+const quote_container = {
+  width: '95%',
+  marginLeft: '2.5%',
+  marginRight: '2.5%'
+};
+
+const quote_style = {
+  width: '33.3%',
+  height: '100%',
+  fontSize: '20px',
+  marginTop: '20px',
+  color: colors.GRAY,
+  float: 'left'
 };
 
 class About extends React.Component {
   render() {
     return (
       <div style={about_container}>
-        {/* <Carousel>
-          {
-            slideImages.map((img) => {
-              <Carousel.Item>
-                <img
-                  src={img}
-                />
-              </Carousel.Item>
-            })
-          }
-        </Carousel> */}
-        <Carousel>
-          <Carousel.Item>
-            <img src={slideImages[0]} />
-          </Carousel.Item>
-          <Carousel.Item>
-            <img src={slideImages[1]} />
-          </Carousel.Item>
-        </Carousel>
+        <img src={'../static/darty.gif'} style={{ width: '100%' }} />
+        <div style={quote_container}>
+          <div style={quote_style}>
+            <FontAwesomeIcon icon={['fas', 'quote-left']} color={colors.BLUE} />
+            <p>
+              <b>"This is probably gonna fail"</b>
+              <br /> ~ Me
+            </p>
+          </div>
+          <div style={quote_style}>
+            <FontAwesomeIcon icon={['fas', 'quote-left']} color={colors.BLUE} />
+            <p>
+              <b>"I'm showing up HAMMERED"</b>
+              <br /> ~ Natalie Stiner
+            </p>
+          </div>
+          <div style={quote_style}>
+            <FontAwesomeIcon icon={['fas', 'quote-left']} color={colors.BLUE} />
+            <p>
+              <b>"Happy birthday!"</b>
+              <br /> ~ My mom
+            </p>
+          </div>
+        </div>
       </div>
     );
   }
