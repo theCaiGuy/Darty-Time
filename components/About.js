@@ -104,7 +104,7 @@ class About extends React.Component {
                     });
                   }}
                 >
-                  Hide
+                  Tell me less!
                 </button>
                 <div style={modal_text}>
                   Dear reader,
@@ -112,18 +112,16 @@ class About extends React.Component {
                   <br />
                   If you had told me last year on my birthday that my next birthday party would be 100% virtual, I would
                   probably not have remembered it. But if you had told me the day after, I absolutely would not have
-                  believed you. In what universe could MY birthday, perfectly positioned at the peak of Darty szn, be
-                  held virtually? And on ZOOM??? Well, you don't need me to remind you how the world has changed since
-                  then.
+                  believed you. In what universe could MY birthday, perfectly positioned at the peak of DARTY SZN, be
+                  held virtually...on ZOOM??? And yet, here we are.
                   <br />
                   <br />
-                  However, birthdays aren't a time to mourn for a darty that could have been - rather, they are a time
-                  to celebrate all that's good and wonderful about life. And this year especially, with all that is
-                  happening in this world, I wanted my birthday to be a celebration of all the amazing people who have
-                  made my life so rich and so exciting. I hope that, despite all that has happened these last few
-                  months, this website and this virtual darty can bring a little bit of joy to your life. Please join me
-                  in hopping on the Zoom call, syncing our Spotify playlists, and enjoying some long-distance party
-                  games.
+                  But birthdays aren't a time to mourn for a darty that could have been - rather, they are a time to
+                  celebrate all that's good and wonderful about life. This year especially, with all that is happening
+                  in this world, I wanted my birthday to be a celebration of all the amazing people who have made my
+                  life so rich and so exciting. I hope that, despite all that has happened these last few months, this
+                  website and this virtual darty can bring a little bit of joy to your life. Please join me in hopping
+                  on the Zoom call, syncing our Spotify playlists, and enjoying some long-distance party games.
                   <br />
                   <br />
                   At the same time, I think it is important for us to remember those less fortunate than us, especially
@@ -131,11 +129,11 @@ class About extends React.Component {
                   why I hope you will join the GamePigeon Cup Pong tournament, where your $10 contributions will be
                   donated to charities selected by the 1st, 2nd, and 3rd place finishers. This way, our tongue-in-cheek
                   fun can go toward supporting those in need. Sadly, Cup Pong is only available on iOS at the moment,
-                  but to my Android friends, if you are able, please consider donating to my birthday fundraiser for
-                  Feeding America, a nonprofit running food banks across America.
+                  but to my Android friends (and my iOS ones), if you are able, please consider donating to my birthday
+                  fundraiser for Feeding America, a nonprofit running food banks across the United States.
                   <br />
                   <br />
-                  Thank you again for coming today. I love and appreciate you so much.
+                  Thank you again for coming today. I hope you have a wonderful time. I love and appreciate you so much.
                   <br />
                   <br />
                   Michael

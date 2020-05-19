@@ -145,7 +145,6 @@ class App extends Component {
           }}
         >
           <div style={HalfSectionLeft}>
-            <h1>TODO: Rooms</h1>
             <Rooms />
           </div>
           <div style={HalfSectionRight}>
