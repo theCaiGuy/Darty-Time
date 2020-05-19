@@ -41,7 +41,7 @@ class Rooms extends React.Component {
         <div
           style={{
             ...btn_style,
-            color: 'white',
+            color: colors.BLUE,
             backgroundColor: colors.PINK
           }}
           onClick={() => {
@@ -53,8 +53,8 @@ class Rooms extends React.Component {
         <div
           style={{
             ...btn_style,
-            color: colors.OCEAN,
-            backgroundColor: colors.YELLOW
+            color: 'white',
+            backgroundColor: colors.SOLO_CUP
           }}
           onClick={() => {
             window.open('http://gamepigeonapp.com/'); // TODO: REPLACE ME!!!
