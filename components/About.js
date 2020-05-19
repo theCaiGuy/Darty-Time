@@ -126,11 +126,12 @@ class About extends React.Component {
                   <br />
                   At the same time, I think it is important for us to remember those less fortunate than us, especially
                   as the Covid-19 crisis disproportionately impacts service workers, minorities, and immigrants. That is
-                  why I hope you will join the GamePigeon Cup Pong tournament, where your $10 contributions will be
-                  donated to charities selected by the 1st, 2nd, and 3rd place finishers. This way, our tongue-in-cheek
-                  fun can go toward supporting those in need. Sadly, Cup Pong is only available on iOS at the moment,
-                  but to my Android friends (and my iOS ones), if you are able, please consider donating to my birthday
-                  fundraiser for Feeding America, a nonprofit running food banks across the United States.
+                  why I hope you will join the GamePigeon Cup Pong tournament, where your $10 buy-in contribution will
+                  be donated to charities selected by the 1st, 2nd, and 3rd place finishers. This way, our
+                  tongue-in-cheek fun can go toward supporting those in need. Sadly, Cup Pong is only available on iOS
+                  at the moment, but to my Android friends (and my iOS ones), if you are able, please consider donating
+                  to my birthday fundraiser for Feeding America, a nonprofit running food banks across the United
+                  States.
                   <br />
                   <br />
                   Thank you again for coming today. I hope you have a wonderful time. I love and appreciate you so much.
