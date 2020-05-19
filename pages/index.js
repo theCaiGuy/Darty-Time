@@ -13,9 +13,9 @@ import Layout from '../components/MyLayout.js';
 import * as colors from '../constants/color_scheme';
 import Header from '../components/Header';
 import About from '../components/About';
-import Chat from '../components/Chat';
 import Donate from '../components/Donate';
 import Rooms from '../components/Rooms';
+import Modal from 'react-bootstrap/Modal';
 
 library.add(fab);
 
@@ -134,9 +134,6 @@ class App extends Component {
             }}
           >
             <About />
-          </div>
-          <div style={Section}>
-            <Chat />
           </div>
         </div>
         <div

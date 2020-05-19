@@ -1,4 +1,9 @@
 import React from 'react';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+
+library.add(fas);
 
 const queueElem = {
   marginLeft: '10px',
@@ -59,11 +64,17 @@ export default ({ index, item, session, onRemoveItem, onVoteUp, onVoteDown, bgCo
           session.user &&
           item.voters.filter(v => v && session.user && v.id === session.user.id).length === 0 ? (
             <button onClick={onVoteUp} className="btn" style={btnStyle}>
-              ▲
+              <FontAwesomeIcon icon={['fas', 'thumbs-up']} color="white" />
+            </button>
+          ) : item.voters &&
+            session.user &&
+            item.voters.filter(v => v && session.user && v.id === session.user.id).length !== 0 ? (
+            <button onClick={onVoteDown} className="btn" style={btnStyle}>
+              <FontAwesomeIcon icon={['fas', 'thumbs-down']} color="white" />
             </button>
           ) : (
-            <button onClick={onVoteDown} className="btn" style={btnStyle}>
-              ▼
+            <button disabled style={btnStyle}>
+              -
             </button>
           )}
         </div>
@@ -82,7 +93,7 @@ export default ({ index, item, session, onRemoveItem, onVoteUp, onVoteDown, bgCo
             </button>
           ) : (
             <button disabled style={btnStyle}>
-              X
+              -
             </button>
           )}
         </div>

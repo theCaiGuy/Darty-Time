@@ -1,8 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-
-import ButtonStyle from './ButtonStyle';
-import ButtonDarkStyle from './ButtonDarkStyle';
 import { fetchAvailableDevices, transferPlaybackToDevice } from '../actions/devicesActions';
 import { getIsFetchingDevices } from '../reducers';
 import { getDevices } from '../reducers';
@@ -40,6 +37,17 @@ const activeText = {
   padding: '8px'
 };
 
+const btn_style = {
+  backgroundColor: colors.GREEN,
+  border: '0px',
+  borderRadius: '20px',
+  color: 'white',
+  fontSize: '18px',
+  padding: '10px',
+  marginTop: '5px',
+  cursor: 'pointer'
+};
+
 class Devices extends React.PureComponent {
   state = {
     selected: -1
@@ -49,8 +57,6 @@ class Devices extends React.PureComponent {
     const { devices, isFetching, fetchAvailableDevices, transferPlaybackToDevice } = this.props;
     return (
       <div>
-        <style jsx>{ButtonStyle}</style>
-        <style jsx>{ButtonDarkStyle}</style>
         <style jsx>{`
           .deviceStyle:hover {
             background-color: #eee;
@@ -59,7 +65,7 @@ class Devices extends React.PureComponent {
         `}</style>
         {devices.length === 0 ? (
           <button
-            className="btn btn--dark"
+            style={btn_style}
             disabled={isFetching}
             onClick={() => {
               fetchAvailableDevices();
@@ -86,7 +92,7 @@ class Devices extends React.PureComponent {
                     {device.is_active ? (
                       <div style={activeText}>
                         {device.name}
-                        <FontAwesomeIcon icon={['fas', 'headphones']} color="black" />
+                        <FontAwesomeIcon icon={['fas', 'headphones']} color="black" style={{ marginLeft: '5px' }} />
                       </div>
                     ) : (
                       <p style={passiveText}>{device.name}</p>
@@ -96,8 +102,7 @@ class Devices extends React.PureComponent {
               })}
             </ul>
             <button
-              className="btn btn--dark"
-              style={{ marginTop: '5px' }}
+              style={btn_style}
               disabled={isFetching}
               onClick={() => {
                 fetchAvailableDevices();

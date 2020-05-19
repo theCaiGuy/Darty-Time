@@ -1,8 +1,6 @@
 import { connect } from 'react-redux';
 import { login } from '../actions/sessionActions';
 import { mutePlayback, unmutePlayback } from '../actions/playbackActions';
-import ButtonStyle from './ButtonStyle';
-import ButtonDarkStyle from './ButtonDarkStyle';
 import * as colors from '../constants/color_scheme';
 
 const headerStyle = {
@@ -64,6 +62,17 @@ const wordLogoStyle = {
   fontWeight: 'bold'
 };
 
+const btn_style = {
+  backgroundColor: colors.GREEN,
+  border: '0px',
+  borderRadius: '20px',
+  color: 'white',
+  fontSize: '18px',
+  padding: '10px',
+  marginTop: '5px',
+  cursor: 'pointer'
+};
+
 const getNameFromUser = user => {
   return user.display_name || user.id;
 };
@@ -101,9 +110,7 @@ const Header = ({ session, muted, mutePlayback, unmutePlayback, login }) => (
           </div>
         </div>
       ) : (
-        <button className="btn btn--dark" style={{ width: '360px' }} onClick={login}>
-          <style jsx>{ButtonStyle}</style>
-          <style jsx>{ButtonDarkStyle}</style>
+        <button style={btn_style} onClick={login}>
           Login with Spotify to sync music
         </button>
       )}
