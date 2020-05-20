@@ -83,7 +83,8 @@ class Player extends React.Component {
           </div>
           <div style={devices}>
             <h2 style={header2}>Connect to a device</h2>
-            {this.props.session.user !== null ? <Devices /> : null}
+            {/* {this.props.session.user !== null ? <Devices /> : null} */}
+            <Devices logged_in={this.props.session.user !== null} />
           </div>
         </div>
       </div>

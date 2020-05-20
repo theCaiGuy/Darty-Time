@@ -33,7 +33,7 @@ class Rooms extends React.Component {
             backgroundColor: colors.BLUE
           }}
           onClick={() => {
-            window.open('https://zoom.us'); // TODO: REPLACE ME!!!
+            window.open('https://stanford.zoom.us/j/92401936756');
           }}
         >
           Zoom

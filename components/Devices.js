@@ -48,10 +48,15 @@ const btn_style = {
   cursor: 'pointer'
 };
 
+const paragraphStyle = {
+  color: colors.GRAY,
+  textAlign: 'left'
+};
+
 class Devices extends React.PureComponent {
-  state = {
-    selected: -1
-  };
+  constructor(props) {
+    super(props);
+  }
 
   render() {
     const { devices, isFetching, fetchAvailableDevices, transferPlaybackToDevice } = this.props;
@@ -63,53 +68,77 @@ class Devices extends React.PureComponent {
             cursor: pointer;
           }
         `}</style>
-        {devices.length === 0 ? (
-          <button
-            style={btn_style}
-            disabled={isFetching}
-            onClick={() => {
-              fetchAvailableDevices();
-            }}
-          >
-            Search for Available Devices
-          </button>
+        {this.props.logged_in ? (
+          <div>
+            {devices.length === 0 ? (
+              <div>
+                <button
+                  style={btn_style}
+                  disabled={isFetching}
+                  onClick={() => {
+                    fetchAvailableDevices();
+                  }}
+                >
+                  Search for Available Devices
+                </button>
+                <p style={paragraphStyle}>
+                  1. Log in with your Spotify account by clicking "Log in with Spotify to sync music" above
+                </p>
+                <p style={paragraphStyle}>
+                  2. Make sure the Spotify App is installed and running on your device of choice
+                </p>
+                <p style={paragraphStyle}>3. Click the above button to find and select a device</p>
+              </div>
+            ) : (
+              <div>
+                <ul style={deviceList}>
+                  {devices.map((device, index) => {
+                    return (
+                      <li
+                        key={index}
+                        style={deviceStyle}
+                        className="deviceStyle"
+                        onClick={() => {
+                          if (!device.is_active) {
+                            transferPlaybackToDevice(device.id);
+                            window.location.reload(false);
+                          }
+                        }}
+                      >
+                        {device.is_active ? (
+                          <div style={activeText}>
+                            {device.name}
+                            <FontAwesomeIcon icon={['fas', 'headphones']} color="black" style={{ marginLeft: '5px' }} />
+                          </div>
+                        ) : (
+                          <p style={passiveText}>{device.name}</p>
+                        )}
+                      </li>
+                    );
+                  })}
+                </ul>
+                <button
+                  style={btn_style}
+                  disabled={isFetching}
+                  onClick={() => {
+                    fetchAvailableDevices();
+                  }}
+                >
+                  Refresh Device List
+                </button>
+              </div>
+            )}
+          </div>
         ) : (
           <div>
-            <ul style={deviceList}>
-              {devices.map((device, index) => {
-                return (
-                  <li
-                    key={index}
-                    style={deviceStyle}
-                    className="deviceStyle"
-                    onClick={() => {
-                      if (!device.is_active) {
-                        transferPlaybackToDevice(device.id);
-                        window.location.reload(false);
-                      }
-                    }}
-                  >
-                    {device.is_active ? (
-                      <div style={activeText}>
-                        {device.name}
-                        <FontAwesomeIcon icon={['fas', 'headphones']} color="black" style={{ marginLeft: '5px' }} />
-                      </div>
-                    ) : (
-                      <p style={passiveText}>{device.name}</p>
-                    )}
-                  </li>
-                );
-              })}
-            </ul>
-            <button
-              style={btn_style}
-              disabled={isFetching}
-              onClick={() => {
-                fetchAvailableDevices();
-              }}
-            >
-              Refresh Device List
+            <button style={btn_style} disabled>
+              Log in to find devices
             </button>
+            <p style={paragraphStyle}>
+              1. Log in with your Spotify account by clicking "Log in with Spotify to sync music" above
+            </p>
+            <p style={paragraphStyle}>2. Make sure the Spotify App is installed and running on your device of choice</p>
+            <p style={paragraphStyle}>3. Click the above button to find and select a device</p>
           </div>
         )}
       </div>

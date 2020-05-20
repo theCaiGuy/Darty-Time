@@ -104,7 +104,7 @@ class About extends React.Component {
                     });
                   }}
                 >
-                  Say less!
+                  Tell me less!
                 </button>
                 <div style={modal_text}>
                   Dear reader,
@@ -149,7 +149,7 @@ class About extends React.Component {
                   });
                 }}
               >
-                Say more!
+                Tell me more!
               </button>
             )}
           </div>

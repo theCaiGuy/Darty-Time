@@ -111,7 +111,7 @@ const Header = ({ session, muted, mutePlayback, unmutePlayback, login }) => (
         </div>
       ) : (
         <button style={btn_style} onClick={login}>
-          Login with Spotify to sync music
+          Log in with Spotify to sync music
         </button>
       )}
     </div>
