@@ -88,7 +88,6 @@ const Header = ({ session, muted, mutePlayback, unmutePlayback, login }) => (
     </div>
 
     <div style={logoUserBox}>
-      {/* <img style={wordLogoStyle} src={'../static/word_logo.png'} alt="Darty Time" /> */}
       <div style={wordLogoStyle}>Darty Time</div>
       {session.user ? (
         <div style={userHeader}>

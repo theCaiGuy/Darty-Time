@@ -148,7 +148,6 @@ class App extends Component {
             <Rooms />
           </div>
           <div style={HalfSectionRight}>
-            <h1>TODO: Donate</h1>
             <Donate />
           </div>
         </div>

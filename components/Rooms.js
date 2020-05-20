@@ -4,9 +4,9 @@ import * as colors from '../constants/color_scheme';
 
 const rooms_container = {
   alignItems: 'center',
-  width: '95%',
-  marginLeft: '2.5%',
-  marginRight: '2.5%',
+  width: '90%',
+  marginLeft: '5%',
+  marginRight: '5%',
   height: 'auto',
   overflow: 'auto'
 };
@@ -29,7 +29,7 @@ class Rooms extends React.Component {
         <div
           style={{
             ...btn_style,
-            color: colors.PINK,
+            color: 'white',
             backgroundColor: colors.BLUE
           }}
           onClick={() => {
@@ -41,7 +41,7 @@ class Rooms extends React.Component {
         <div
           style={{
             ...btn_style,
-            color: colors.BLUE,
+            color: 'white',
             backgroundColor: colors.PINK
           }}
           onClick={() => {

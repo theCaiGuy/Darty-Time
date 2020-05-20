@@ -72,6 +72,13 @@ class Devices extends React.PureComponent {
           <div>
             {devices.length === 0 ? (
               <div>
+                <p style={paragraphStyle}>
+                  1. Log in with your Spotify account by clicking "Log in with Spotify to sync music" above
+                </p>
+                <p style={paragraphStyle}>
+                  2. Make sure the Spotify App is installed and running on your device of choice
+                </p>
+                <p style={paragraphStyle}>3. Click the above button to find and select a device</p>
                 <button
                   style={btn_style}
                   disabled={isFetching}
@@ -81,13 +88,6 @@ class Devices extends React.PureComponent {
                 >
                   Search for Available Devices
                 </button>
-                <p style={paragraphStyle}>
-                  1. Log in with your Spotify account by clicking "Log in with Spotify to sync music" above
-                </p>
-                <p style={paragraphStyle}>
-                  2. Make sure the Spotify App is installed and running on your device of choice
-                </p>
-                <p style={paragraphStyle}>3. Click the above button to find and select a device</p>
               </div>
             ) : (
               <div>
@@ -131,14 +131,14 @@ class Devices extends React.PureComponent {
           </div>
         ) : (
           <div>
-            <button style={btn_style} disabled>
-              Log in to find devices
-            </button>
             <p style={paragraphStyle}>
               1. Log in with your Spotify account by clicking "Log in with Spotify to sync music" above
             </p>
             <p style={paragraphStyle}>2. Make sure the Spotify App is installed and running on your device of choice</p>
             <p style={paragraphStyle}>3. Click the above button to find and select a device</p>
+            <button style={btn_style} disabled>
+              Log in to find devices
+            </button>
           </div>
         )}
       </div>
