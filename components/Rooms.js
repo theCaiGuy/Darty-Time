@@ -45,7 +45,7 @@ class Rooms extends React.Component {
             backgroundColor: colors.PINK
           }}
           onClick={() => {
-            window.open('https://skribbl.io/'); // TODO: REPLACE ME!!!
+            window.open('https://skribbl.io/?McMHLiKdtdIU');
           }}
         >
           Skribbl.io
@@ -57,7 +57,7 @@ class Rooms extends React.Component {
             backgroundColor: colors.SOLO_CUP
           }}
           onClick={() => {
-            window.open('http://gamepigeonapp.com/'); // TODO: REPLACE ME!!!
+            window.open('https://challonge.com/dartytime');
           }}
         >
           Cup Pong
