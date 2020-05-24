@@ -42,18 +42,6 @@ class Rooms extends React.Component {
           style={{
             ...btn_style,
             color: 'white',
-            backgroundColor: colors.PINK
-          }}
-          onClick={() => {
-            window.open('https://skribbl.io/?McMHLiKdtdIU');
-          }}
-        >
-          Skribbl.io
-        </div>
-        <div
-          style={{
-            ...btn_style,
-            color: 'white',
             backgroundColor: colors.SOLO_CUP
           }}
           onClick={() => {
